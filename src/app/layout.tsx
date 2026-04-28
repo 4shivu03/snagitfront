@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Providers from "./providers";
+import { Toaster } from "sonner";
+import { LoadingProvider } from "@/context/LoadingContext";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,7 +21,10 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <Providers>
+          <LoadingProvider> 
         {children}
+        </LoadingProvider> 
+        <Toaster /> 
         </Providers>
       </body>
     </html>
