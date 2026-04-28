@@ -1,10 +1,11 @@
 import axios from "axios";
 import { refreshTokenApi } from "./authApi";
+// export const api = axios.create({
+//  baseURL: "http://localhost:5270/api",
+// });
 export const api = axios.create({
- baseURL: "http://localhost:5270/api",
+ baseURL: "https://snagitbackend.onrender.com/api",
 });
-
-// baseURL: "https://snagit-tn2p.onrender.com/api",
 api.interceptors.request.use((config) => {
   const state = JSON.parse(localStorage.getItem("persist:root") || "{}");
   const auth = JSON.parse(state.auth || "{}");

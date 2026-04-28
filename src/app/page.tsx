@@ -1,3 +1,5 @@
+import AppButton from "@/components/common/AppButton";
+import { ShoppingCart } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
@@ -11,12 +13,12 @@ export default function Home() {
           Discover the best products at unbeatable prices. Quality you can
           trust.
         </p>
-        {/* <AppButton>
+        <AppButton>
           <div className="flex items-center gap-2">
             <ShoppingCart size={20} />
             <span>Shop Now</span>
           </div>
-        </AppButton> */}
+        </AppButton>
       </section>
       <section className="px-6 py-12 max-w-7xl mx-auto">
         <h2 className="text-2xl font-bold mb-6">Categories</h2>
@@ -45,7 +47,7 @@ export default function Home() {
               />
               <h3 className="mt-3 font-semibold">Product {item}</h3>
               <p className="text-gray-400 text-sm">₹999</p>
-              {/* <AppButton>Add to Cart</AppButton> */}
+              <AppButton>Add to Cart</AppButton>
             </div>
           ))}
         </div>
@@ -53,7 +55,7 @@ export default function Home() {
       <section className="bg-gray-800 text-center py-12 mt-10">
         <h2 className="text-3xl font-bold mb-3">Big Sale is Live 🔥</h2>
         <p className="mb-4 text-gray-400">Up to 50% OFF on selected items</p>
-        {/* <AppButton>Explore Now</AppButton> */}
+        <AppButton>Explore Now</AppButton>
       </section>
     </main>
   );
