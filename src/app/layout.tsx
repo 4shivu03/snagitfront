@@ -3,6 +3,7 @@ import "./globals.css";
 import Providers from "./providers";
 import { Toaster } from "sonner";
 import { LoadingProvider } from "@/context/LoadingContext";
+import AppLayout from "./AppLayout/AppLayout";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,16 +16,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`h-full antialiased`}
-    >
+    <html lang="en" className={`h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <Providers>
-          <LoadingProvider> 
-        {children}
-        </LoadingProvider> 
-        <Toaster /> 
+          <LoadingProvider>
+            <AppLayout>{children}</AppLayout>
+          </LoadingProvider>
+          <Toaster />
         </Providers>
       </body>
     </html>
