@@ -1,11 +1,12 @@
 "use client";
 
-import { Input } from "@/components/ui/input";
+import AppFormField from "./AppFormField";
 
 type FieldType = {
   name: string;
   placeholder: string;
   type?: string;
+  icon?: any;
 };
 
 type Props = {
@@ -22,21 +23,22 @@ export default function AppFormSection({
   errors,
 }: Props) {
   return (
-    <div>
-      <h3 className="mb-2 text-sm text-gray-300 font-semibold">{title}</h3>
-      <div className="grid md:grid-cols-2 gap-4">
+    <div className="bg-gray-800/60 border border-gray-700 rounded-xl p-6">
+      <h3 className="text-white font-semibold mb-5 text-sm">
+        {title}
+      </h3>
+
+      <div className="grid md:grid-cols-2 gap-5">
         {fields.map((field, index) => (
-          <div key={index}>
-            <Input
-              type={field.type || "text"}
+          <div key={index} className="flex flex-col justify-center">
+            <AppFormField
+              name={field.name}
               placeholder={field.placeholder}
-              {...register(field.name)}
+              type={field.type}
+              icon={field.icon}
+              register={register}
+              error={errors?.[field.name]?.message}
             />
-            {errors?.[field.name] && (
-              <p className="text-red-400 text-sm mt-1">
-                {errors[field.name]?.message}
-              </p>
-            )}
           </div>
         ))}
       </div>

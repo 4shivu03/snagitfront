@@ -42,9 +42,9 @@ export default function SignupPage() {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-black via-gray-900 to-gray-800">
-      <Card className="w-full max-w-md bg-white backdrop-blur-xl p-6">
+      <Card className="w-full max-w-md bg-gray-800 backdrop-blur-xl p-6">
         <CardContent>
-          <h2 className="text-gray-800 font-bold text-xl font-bold text-center mb-4">
+          <h2 className="text-white font-bold text-xl font-bold text-center mb-4">
             Create Account
           </h2>
           <form
@@ -101,20 +101,20 @@ export default function SignupPage() {
               </Button>
             </div>
           </form>
-          <p className="text-gray-800 text-center mt-4">
+          <p className="text-white text-center mt-4">
             Already have account?{" "}
             <Link
               href="/login"
-              className="text-gray-800 font-bold cursor-pointer hover:underline"
+              className="text-white font-bold cursor-pointer hover:underline"
             >
               Login here!
             </Link>
           </p>
-          <p className="text-gray-800 text-center mt-4">
+          <p className="text-white text-center mt-4">
             Are you a seller?{" "}
             <Link
               href="/sellerregistration"
-              className="text-gray-800 font-bold cursor-pointer hover:underline"
+              className="text-white font-bold cursor-pointer hover:underline"
             >
               Signup here!
             </Link>

@@ -59,11 +59,11 @@ export default function ForgotPasswordPage() {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-black via-gray-900 to-gray-800">      
-      <div className="w-full max-w-md bg-white p-6 rounded-xl shadow-lg">
-        <h2 className="text-gray-800 text-xl font-bold text-center mb-2">
+      <div className="w-full max-w-md bg-gray-800 p-6 rounded-xl shadow-lg">
+        <h2 className="text-white text-xl font-bold text-center mb-2">
           Forgot Password
         </h2>
-        <p className="text-gray-500 text-center text-sm mb-4">
+        <p className="text-white text-center text-sm mb-4">
           {step === 1
             ? "Enter your email to receive OTP"
             : `OTP sent to ${email}`}
@@ -82,7 +82,7 @@ export default function ForgotPasswordPage() {
               icon={Mail}
             />
             <div className="flex justify-center">
-              <Button className="flex items-center gap-2 bg-gray-700 text-white hover:bg-black px-10 py-3">
+              <Button className="flex items-center gap-2 bg-gray-600 text-white border border-gray-800 hover:bg-white hover:text-gray-800 px-10 py-3 cursor-pointer disabled:cursor-not-allowed disabled:opacity-50">
                 <Send size={18} />
                 Send OTP
               </Button>
@@ -112,7 +112,7 @@ export default function ForgotPasswordPage() {
               icon={LockOpen}
             />
             <div className="flex justify-center">
-              <Button className="flex items-center gap-2 bg-gray-700 text-white hover:bg-black px-10 py-3">
+              <Button className="flex items-center gap-2 bg-gray-600 text-white border border-gray-800 hover:bg-white hover:text-gray-800 px-10 py-3 cursor-pointer disabled:cursor-not-allowed disabled:opacity-50">
                 <LockOpen size={18} />
                 Reset Password
               </Button>

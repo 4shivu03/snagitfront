@@ -31,7 +31,7 @@ export default function AppFormField({
       <Input
         type={type}
         placeholder={placeholder}
-        className="pl-10 placeholder:text-gray-800"
+        className="pl-10 bg-white text-gray-800"
         {...(maxlength && { maxLength: maxlength })}
         {...(minlength && { minLength: minlength })}      
         {...register(name)}
